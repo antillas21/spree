@@ -495,7 +495,7 @@ class Order < ActiveRecord::Base
   end
 
   def amount
-    line_items.map(&:amount).sum
+    self.line_items.map(&:amount).sum
   end
 
 end
